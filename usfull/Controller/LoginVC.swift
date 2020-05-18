@@ -15,6 +15,7 @@ class LoginVC: UIViewController {
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var orLoginWithLabel: UILabel!
     var appData = AppData()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,9 +37,10 @@ class LoginVC: UIViewController {
         
         pleaseloginLabel.font = UIFont(name: "SegoeUI", size: 25)
         
+        orLoginWithLabel.font = UIFont(name: "SegoeUI-Light", size: 16)
 // customizing registerButton
         let attributedString = NSAttributedString(string: NSLocalizedString("  tap here to register", comment: ""), attributes:[
-            NSAttributedString.Key.font : UIFont.init(name: "Symbol", size: 15),
+            NSAttributedString.Key.font : UIFont.init(name: "SegoeUI", size: 15),
             NSAttributedString.Key.foregroundColor : UIColor.white,
             NSAttributedString.Key.underlineStyle:1.0
         ])

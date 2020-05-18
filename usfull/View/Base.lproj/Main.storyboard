@@ -19,7 +19,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="iYS-ql-yqW">
-                                <rect key="frame" x="92" y="264" width="230" height="195"/>
+                                <rect key="frame" x="92" y="274" width="230" height="229"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please log in" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hkD-Ej-WZ1">
                                         <rect key="frame" x="0.0" y="0.0" width="230" height="35"/>
@@ -39,25 +39,30 @@
                                         <fontDescription key="fontDescription" name="Symbol" family="Symbol" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="  Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pMd-ct-lOG">
-                                        <rect key="frame" x="0.0" y="150" width="230" height="45"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="45" id="4JH-p8-zWP"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Symbol" family="Symbol" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
-                                    </textField>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="v6T-xw-iIL">
+                                        <rect key="frame" x="0.0" y="150" width="230" height="79"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="  Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pMd-ct-lOG">
+                                                <rect key="frame" x="0.0" y="0.0" width="230" height="45"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="4JH-p8-zWP"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Symbol" family="Symbol" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ybU-iC-aG0">
+                                                <rect key="frame" x="0.0" y="47" width="230" height="32"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="14"/>
+                                                <state key="normal" title=" tap here to register">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LG" translatesAutoresizingMaskIntoConstraints="NO" id="fTm-Cf-Wb5">
-                                <rect key="frame" x="162" y="144" width="90" height="90"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="90" id="260-mI-zAe"/>
-                                    <constraint firstAttribute="width" constant="90" id="5xT-sT-GTE"/>
-                                </constraints>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s9z-g4-Z6J">
-                                <rect key="frame" x="147" y="531" width="120" height="45"/>
+                                <rect key="frame" x="147" y="543" width="120" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="dPK-lW-f2d"/>
                                     <constraint firstAttribute="height" constant="45" id="ubF-7V-pan"/>
@@ -67,36 +72,77 @@
                                     <color key="titleColor" red="0.12156862745098039" green="0.25098039215686274" blue="0.40784313725490196" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ybU-iC-aG0">
-                                <rect key="frame" x="107" y="469" width="200" height="32"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="dp3-hK-beC">
+                                <rect key="frame" x="82" y="628" width="250" height="120"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or log in with" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t9v-XZ-Elb">
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="cMU-ac-5E8"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="Dzo-Rp-jII">
+                                        <rect key="frame" x="0.0" y="60" width="250" height="60"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w1D-Iy-uDV">
+                                                <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="60" id="FjU-SL-zny"/>
+                                                    <constraint firstAttribute="height" constant="60" id="psn-5r-u95"/>
+                                                </constraints>
+                                                <state key="normal" title="Button" image="windows-media-audio"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2YR-kW-EUU">
+                                                <rect key="frame" x="95" y="0.0" width="60" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="Qnv-Es-qDn"/>
+                                                    <constraint firstAttribute="width" constant="60" id="dS2-cC-ekE"/>
+                                                </constraints>
+                                                <state key="normal" title="Button" image="social-media"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pbS-Hq-bdl">
+                                                <rect key="frame" x="190" y="0.0" width="60" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="6ZC-Ri-u96"/>
+                                                    <constraint firstAttribute="width" constant="60" id="NDm-cf-vDH"/>
+                                                </constraints>
+                                                <state key="normal" title="Button" image="logotype"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LG" translatesAutoresizingMaskIntoConstraints="NO" id="BCb-Jz-LbT">
+                                <rect key="frame" x="162" y="154" width="90" height="90"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="jYh-Zc-Xki"/>
+                                    <constraint firstAttribute="width" constant="90" id="Y81-fd-0th"/>
+                                    <constraint firstAttribute="height" constant="90" id="abb-es-2Rx"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="14"/>
-                                <state key="normal" title=" tap here to register">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="BCb-Jz-LbT" firstAttribute="top" secondItem="bGb-3V-By6" secondAttribute="top" constant="110" id="3fR-01-Yyt"/>
                             <constraint firstAttribute="trailing" secondItem="7XJ-J1-dPf" secondAttribute="trailing" id="5w9-oZ-wOa"/>
                             <constraint firstItem="s9z-g4-Z6J" firstAttribute="centerX" secondItem="bZ6-e7-tZV" secondAttribute="centerX" id="Aw4-75-mSG"/>
-                            <constraint firstItem="fTm-Cf-Wb5" firstAttribute="top" secondItem="bGb-3V-By6" secondAttribute="top" constant="100" id="Cli-FR-G9a"/>
                             <constraint firstItem="iYS-ql-yqW" firstAttribute="centerX" secondItem="bZ6-e7-tZV" secondAttribute="centerX" id="L1u-Xr-wG1"/>
-                            <constraint firstItem="fTm-Cf-Wb5" firstAttribute="centerX" secondItem="bZ6-e7-tZV" secondAttribute="centerX" id="MoI-Ux-8tB"/>
-                            <constraint firstItem="s9z-g4-Z6J" firstAttribute="top" secondItem="ybU-iC-aG0" secondAttribute="bottom" constant="30" id="OZb-pb-Zdb"/>
-                            <constraint firstItem="ybU-iC-aG0" firstAttribute="top" secondItem="iYS-ql-yqW" secondAttribute="bottom" constant="10" id="TLz-6H-FNj"/>
                             <constraint firstItem="7XJ-J1-dPf" firstAttribute="leading" secondItem="bZ6-e7-tZV" secondAttribute="leading" id="Tkm-Kt-ScL"/>
+                            <constraint firstItem="BCb-Jz-LbT" firstAttribute="centerX" secondItem="bZ6-e7-tZV" secondAttribute="centerX" id="WUq-SJ-0yn"/>
                             <constraint firstItem="7XJ-J1-dPf" firstAttribute="top" secondItem="bZ6-e7-tZV" secondAttribute="top" id="bRP-go-tBf"/>
-                            <constraint firstItem="iYS-ql-yqW" firstAttribute="top" secondItem="fTm-Cf-Wb5" secondAttribute="bottom" constant="30" id="o0Z-Wt-iAY"/>
+                            <constraint firstItem="dp3-hK-beC" firstAttribute="top" secondItem="s9z-g4-Z6J" secondAttribute="bottom" constant="40" id="c6s-hO-HK8"/>
+                            <constraint firstItem="dp3-hK-beC" firstAttribute="centerX" secondItem="bZ6-e7-tZV" secondAttribute="centerX" id="dIr-0d-akW"/>
+                            <constraint firstItem="s9z-g4-Z6J" firstAttribute="top" secondItem="iYS-ql-yqW" secondAttribute="bottom" constant="40" id="oJG-c7-qSr"/>
                             <constraint firstItem="7XJ-J1-dPf" firstAttribute="bottom" secondItem="bZ6-e7-tZV" secondAttribute="bottom" id="vJ6-Ty-Mfl"/>
-                            <constraint firstItem="ybU-iC-aG0" firstAttribute="centerX" secondItem="bZ6-e7-tZV" secondAttribute="centerX" id="wyo-xV-nil"/>
+                            <constraint firstItem="iYS-ql-yqW" firstAttribute="top" secondItem="BCb-Jz-LbT" secondAttribute="bottom" constant="30" id="zBk-w0-7G4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bGb-3V-By6"/>
                     </view>
                     <connections>
                         <outlet property="loginButton" destination="s9z-g4-Z6J" id="qtI-Vp-pAn"/>
+                        <outlet property="orLoginWithLabel" destination="t9v-XZ-Elb" id="oy7-jJ-0J1"/>
                         <outlet property="passwordTextField" destination="pMd-ct-lOG" id="Qir-qv-7YL"/>
                         <outlet property="pleaseloginLabel" destination="hkD-Ej-WZ1" id="l1O-Mw-zNg"/>
                         <outlet property="registerButton" destination="ybU-iC-aG0" id="vQN-qu-iiF"/>
@@ -168,9 +214,12 @@
         </scene>
     </scenes>
     <resources>
-        <image name="LG" width="1083.6666259765625" height="1083.6666259765625"/>
+        <image name="LG" width="3251" height="3251"/>
         <image name="goybutton" width="1125" height="1125"/>
         <image name="gradient" width="1125" height="2436"/>
+        <image name="logotype" width="512" height="512"/>
         <image name="orange_button" width="1125" height="1125"/>
+        <image name="social-media" width="512" height="512"/>
+        <image name="windows-media-audio" width="512" height="512"/>
     </resources>
 </document>
