@@ -15,7 +15,7 @@ class MainVC: UIViewController {
     var appData = AppData()
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
 
     @IBAction func topButtonPressed(_ sender: UIButton) {

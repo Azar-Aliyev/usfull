@@ -10,25 +10,33 @@ import UIKit
 
 class LoginVC: UIViewController {
 
+    @IBOutlet weak var logoImage: UIImageView!
     @IBOutlet weak var registerButton: UIButton!
     @IBOutlet weak var pleaseloginLabel: UILabel!
-    @IBOutlet weak var usernameTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var emailTextField: CustomTF!
+    @IBOutlet weak var passwordTextField: CustomTF!
     @IBOutlet weak var orLoginWithLabel: UILabel!
     var appData = AppData()
+
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        for family: String in UIFont.familyNames
-        {
-            print(family)
-            for names: String in UIFont.fontNames(forFamilyName: family)
-            {
-                print("== \(names)")
-            }
+        
+// checking the screen size
+        var offset = 0.0
+        if UIScreen.main.bounds.height == 667.0 {
+            offset = 30
+        }
+        else{
+            offset = 110
         }
         
-        usernameTextField.delegate = self
+        logoImage.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: CGFloat(offset)).isActive = true
+        
+//protocol definition part
+        emailTextField.delegate = self
         passwordTextField.delegate = self
         
 //in default, login button is unabled, until both textfields have been filled
@@ -48,54 +56,49 @@ class LoginVC: UIViewController {
         registerButton.titleLabel?.font = UIFont(name: "SegoeUI-Light", size: 16)
         
 // customizing textfields
-        usernameTextField.backgroundColor = .clear
-        usernameTextField.borderStyle = .none
-        usernameTextField.layer.cornerRadius = 22.0
-        usernameTextField.layer.borderWidth = 1.0
-        usernameTextField.layer.borderColor = UIColor.white.cgColor
-        usernameTextField.attributedPlaceholder = NSAttributedString(string: " Username", attributes: [NSAttributedString.Key.foregroundColor : UIColor.white, NSAttributedString.Key.font : UIFont(name: "SegoeUI", size: 19)!])
-        usernameTextField.textColor = UIColor.white
-        let paddingView1: UIView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 19))
-        usernameTextField.leftView = paddingView1
-        usernameTextField.leftViewMode = .always
-        usernameTextField.rightViewMode = .always
-        usernameTextField.font = UIFont(name: "SegoeUI", size: 17)
-        
-        passwordTextField.backgroundColor = .clear
-        passwordTextField.borderStyle = .none
-        passwordTextField.layer.cornerRadius = 22.0
-        passwordTextField.layer.borderWidth = 1.0
-        passwordTextField.layer.borderColor = UIColor.white.cgColor
-        passwordTextField.attributedPlaceholder = NSAttributedString(string: " Password", attributes: [NSAttributedString.Key.foregroundColor : UIColor.white, NSAttributedString.Key.font : UIFont(name: "SegoeUI", size: 19)!])
-        passwordTextField.textColor = UIColor.white
-        let paddingView2: UIView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 20))
-        passwordTextField.leftView = paddingView2
-        passwordTextField.leftViewMode = .always
-        passwordTextField.font = UIFont(name: "SegoeUI", size: 17)
+        emailTextField.setPlaceholder(placeholder: " E-mail")
+        passwordTextField.setPlaceholder(placeholder: " Password")
 // customizing loginButton
         
         loginButton.backgroundColor = UIColor.white
         loginButton.layer.cornerRadius = 22.0
         loginButton.titleLabel?.font = UIFont(name: "SegoeUI", size: 22)
+
         
+    }
+
+    
+    @IBAction func registerButtonPressed(_ sender: UIButton) {
+        performSegue(withIdentifier: "fromLoginToSignupMentor1", sender: self)
     }
     
     func updateButton(){
-        if usernameTextField.text != "" && passwordTextField.text != ""{
+        if emailTextField.text != "" && passwordTextField.text != ""{
             loginButton.alpha = 1.0
             loginButton.isEnabled = true
         }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //pass data to signup mentor
     }
     
 }
 
 extension LoginVC: UITextFieldDelegate{
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        usernameTextField.endEditing(true)
+        emailTextField.endEditing(true)
         passwordTextField.endEditing(true)
         return true
     }
     func textFieldDidEndEditing(_ textField: UITextField) {
-      updateButton()
+        updateButton()
+        textField.alpha = 0.7
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        textField.alpha = 1
     }
 }
+
+

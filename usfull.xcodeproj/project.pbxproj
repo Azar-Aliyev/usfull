@@ -20,6 +20,9 @@
 		BBFF53DD2472D117009340AB /* Segoe UI.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BBFF53DC2472D117009340AB /* Segoe UI.ttf */; };
 		BBFF53DF2472D820009340AB /* Segoe UI Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BBFF53DE2472D820009340AB /* Segoe UI Bold.ttf */; };
 		BBFF53E12472E774009340AB /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFF53E02472E774009340AB /* AppData.swift */; };
+		BBFF53E92475A36F009340AB /* MentorSignUpVC1.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFF53E82475A36F009340AB /* MentorSignUpVC1.swift */; };
+		BBFF53EB2475A395009340AB /* MentorSignUpVC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFF53EA2475A395009340AB /* MentorSignUpVC2.swift */; };
+		BBFF53ED2475A801009340AB /* CustomTF.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFF53EC2475A801009340AB /* CustomTF.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +41,9 @@
 		BBFF53DC2472D117009340AB /* Segoe UI.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Segoe UI.ttf"; sourceTree = "<group>"; };
 		BBFF53DE2472D820009340AB /* Segoe UI Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Segoe UI Bold.ttf"; sourceTree = "<group>"; };
 		BBFF53E02472E774009340AB /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
+		BBFF53E82475A36F009340AB /* MentorSignUpVC1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentorSignUpVC1.swift; sourceTree = "<group>"; };
+		BBFF53EA2475A395009340AB /* MentorSignUpVC2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentorSignUpVC2.swift; sourceTree = "<group>"; };
+		BBFF53EC2475A801009340AB /* CustomTF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTF.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				BBFF53E02472E774009340AB /* AppData.swift */,
+				BBFF53EC2475A801009340AB /* CustomTF.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -97,6 +104,8 @@
 			children = (
 				BB2385CE246EBA1E003C9BDA /* MainVC.swift */,
 				BBFF53C52471834C009340AB /* LoginVC.swift */,
+				BBFF53E82475A36F009340AB /* MentorSignUpVC1.swift */,
+				BBFF53EA2475A395009340AB /* MentorSignUpVC2.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -200,6 +209,9 @@
 				BB2385CB246EBA1E003C9BDA /* AppDelegate.swift in Sources */,
 				BBFF53C62471834D009340AB /* LoginVC.swift in Sources */,
 				BB2385CD246EBA1E003C9BDA /* SceneDelegate.swift in Sources */,
+				BBFF53E92475A36F009340AB /* MentorSignUpVC1.swift in Sources */,
+				BBFF53EB2475A395009340AB /* MentorSignUpVC2.swift in Sources */,
+				BBFF53ED2475A801009340AB /* CustomTF.swift in Sources */,
 				BBFF53E12472E774009340AB /* AppData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
