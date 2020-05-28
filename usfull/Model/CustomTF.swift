@@ -19,7 +19,7 @@ class CustomTF: UITextField {
     override func awakeFromNib() {
             self.backgroundColor = .clear
             self.borderStyle = .none
-            self.layer.cornerRadius = 22.0
+            self.layer.cornerRadius = self.frame.height/2.0
             self.layer.borderWidth = 1.0
             self.layer.borderColor = UIColor.white.cgColor
             self.textColor = UIColor.white

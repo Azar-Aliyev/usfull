@@ -1,0 +1,6 @@
+framework module Pods_usfull {
+  umbrella header "Pods-usfull-umbrella.h"
+
+  export *
+  module * { export * }
+}

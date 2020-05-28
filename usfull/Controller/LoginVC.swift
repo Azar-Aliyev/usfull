@@ -69,7 +69,12 @@ class LoginVC: UIViewController {
 
     
     @IBAction func registerButtonPressed(_ sender: UIButton) {
-        performSegue(withIdentifier: "fromLoginToSignupMentor1", sender: self)
+        if appData.buttonChoice == "top" {
+            performSegue(withIdentifier: "fromLoginToSignupMentor1", sender: self)
+        }
+        else { performSegue(withIdentifier: "fromLoginToSignupUser1", sender: self)
+            
+        }
     }
     
     func updateButton(){
